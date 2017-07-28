@@ -25,10 +25,6 @@ Various types of monitoring and triggers for the main features of pgpool-II such
 Please see [pgpool-II user manual](http://www.pgpool.net/docs/latest/pgpool-en.html), [pgpool Wiki](http://www.pgpool.net/mediawiki/index.php/Main_Page) for more detailed informations.
 
 
-### Support for monitoring of cluster system with PostgreSQL + pgpool-II
-And more, it make it possible to monitor a cluster system which is configured with PostgreSQL Streaming replication and pgpool-II or pgpol-II watchdog which add high availability to themselves.  
-Useful triggers which can detects the occurence of split brain, failover are provided through monitoring of postgres, pgpool-II processes.
-
 
 ### Group items
 Monitoring items are grouped by each application to clarify them.  
@@ -48,15 +44,7 @@ The following are main applications.
 |pg.cluster.status  |PostgreSQL processes count as a cluster                                                          |
 
 
-#### Applications | pgpool-II
-|application name   |summary of monitoring                                                                            |
-|:------------------|-------------------------------------------------------------------------------------------------|
-|pgpool.cache       |cash informations using In Memory query Cache                                                    |
-|pgpool.connections |frontend, backend connection count through pgpool-II                                             |
-|pgpool.log         |log monitoring for pgpool-II                                                                     |
-|pgpool.nodes       |backend state, load balance ratio viewed from pgpool-II                                          |
-|pgpool.status      |pgpool-II processes working state, vip existence or non-existence                                |
-|pgpool.watchdog    |pgpool-II processes working state, vip existence or non-existence as a cluster                   |
+
 
 
 ### Improve performance of gathering monitoring items
@@ -70,7 +58,6 @@ pg_monz requires the following software products:
 
 * Zabbix server, zabbix agent, zabbix sender 2.0 or later
 * PostgreSQL 9.2 or later
-* pgpool-II 3.4.0 or later
 
 
 Installation and usage
@@ -83,6 +70,5 @@ License
 -------
 pg_monz is distributed under the Apache License Version 2.0.
 See the LICENSE file for details.
-
-Copyright (C) 2013-2016 SRA OSS, Inc. Japan All Rights Reserved.  
+  
 Copyright (C) 2013-2016 TIS Inc. All Rights Reserved.
