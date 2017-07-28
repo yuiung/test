@@ -63,7 +63,7 @@ if %errorlevel% NEQ 0 (
 )
 
 C:\zabbix_agents\bin\win64\zabbix_sender.exe -c %ZABBIX_AGENTD_CONF% -v -T -i sending_data>result 2>&1
-for /f "tokens=1 delims=;" %%i in ('find /I "info" result') do (
+for /f "tokens=1 delims=;" %%i in ('findstr "info" result') do (
 	set var=%%i
 	for /f "tokens=5 delims= " %%j in ("!var!") do set response=%%j
 )
