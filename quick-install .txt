@@ -1,0 +1,57 @@
+* How to install pg_monz_win v2
+
+1. requirements
+
+- Zabbix server version 2.0+
+- monitored PostgreSQL  9.2+
+- ServerActive setting in zabbix_agentd.conf (zabbix_sender read this file)
+- psql command(and serch path setting) on each PostgreSQL server
+
+1. Uploading Zabbix template using Zabbix frontend.
+
+  Template_App_PostgreSQL.xml
+  Template_App_PostgreSQL_SR.xml
+  Template_App_PostgreSQL_SR_Cluster.xml
+
+2. Move pg_monz_win to zabbix-agent directory 
+
+   default variables for pgsql_funcs.conf
+   ----
+   PGHOST=127.0.0.1
+   PGPORT=5432
+   PGROLE=postgres
+   PGDATABASE=postgres
+   ----
+
+   (*) the definition of configuration directory is in the tempalte macro.
+       {$PGSCRIPT_CONFDIR},{$PGSCRIPTDIR}.
+	You should change {$PGSCRIPT_CONFDIR} to the directory where the pgsql_funcs.conf is,
+	and change {$PGSCRIPTDIR} to the directory where the pgsql_*_funcs.bat is
+
+3. Define groups using Zabbix frontend.
+
+   Create "PostgreSQL" group and add PostgreSQL host to "PostgreSQL" group.
+
+   Each groups are referenced by Template_App_PostgreSQL_SR_Cluster.xml
+   using {$HOST_GROUP} template macro.
+
+4. Check the filepath of zabbix_agentd.conf.
+
+   if your installation of zabbix_agentd.conf is not /etc/zabbix/zabbix_agentd.conf,
+   add {$ZABBIX_AGENTD_CONF} macro to HOST'S MACRO.
+
+   # the definition of zabbix_agentd.conf path is in the template macro.
+     {$ZABBIX_AGENTD_CONF} => /etc/zabbix/zabbix_agentd.conf
+
+5. Link template to host.
+
+   Link "Template App PostgreSQL SR" to PostgreSQL host.
+
+   "Template App PostgreSQL SR Cluster"
+   are simply counting
+            -the number of primary server (sr),
+            -the number of standby server (sr),
+   in same {$HOST_GROUP} using zabbix aggregate key.
+   you want to monitor the split-brain or the number of primary server,
+   Link the above templates to arbitrary host.
+   ex) "PostgreSQL Cluster" as a virtual host
