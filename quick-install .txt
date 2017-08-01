@@ -13,7 +13,7 @@
   Template_App_PostgreSQL_SR.xml
   Template_App_PostgreSQL_SR_Cluster.xml
 
-2. Move pg_monz_win to zabbix-agent directory 
+2. Move pg_monz_win to zabbix-agent directory and edit pgsql_funcs.conf：
 
    default variables for pgsql_funcs.conf
    ----
