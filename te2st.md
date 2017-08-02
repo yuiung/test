@@ -38,4 +38,12 @@ License
 pg_monz is distributed under the Apache License Version 2.0.
 See the LICENSE file for details.
   
+Copyright (C) 2013-2016 TIS Inc. All Rights Reserved.pg_monz 2.0 does not have backward compatibility with the 1.0. When upgrading from 1.0, please install the new version again.
+
+
+License
+-------
+pg_monz is distributed under the Apache License Version 2.0.
+See the LICENSE file for details.
+  
 Copyright (C) 2013-2016 TIS Inc. All Rights Reserved.
