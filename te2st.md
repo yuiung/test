@@ -1,29 +1,5 @@
 pg_monz_win 2.0
-============================
-pg_monz (PostgreSQL monitoring template for Zabbix) is a Zabbix template for
-monitoring PostgreSQL. It enables various types of monitoring of PostgreSQL
-such as alive, resource, performance, etc.
-Pg_monz also supports automatic discovery of databases and tables using the
-discovery feature of Zabbix and can automatically start monitoring.
-
-
-Changes from 1.0
-----------------
-The following is a summary of the major changes.
-
-
-### Support for monitoring of PostgreSQL Streaming Replication
-pg_monz 2.0 now supports monitoring of Streaming Replication which is embedded in PostgreSQL since 9.0.  
-Various monitoring items such as Primary / Standby servers alive monitoring, delay of replication data propagation and conflicts occurred by operation to Primary and Standby are available.
-It is also that a trigger which can detect the occurence of write block query when useing synchronous replication is provided.
-
-### Group items
-Monitoring items are grouped by each application to clarify them.  
-The following are main applications.
-
-
-#### Applications | PostgreSQL
-|application name   |summary of monitoring                                                                            |
+  |
 |:------------------|-------------------------------------------------------------------------------------------------|
 |pg.transactions    |Connection count, state to PostgreSQL, the number of commited, rolled back transactions          |
 |pg.log             |log monitoring for PostgreSQL                                                                    |
