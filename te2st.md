@@ -8,7 +8,12 @@ pg_monz_win 2.0
 |pg.sr.status       |conflict count, write block existence or non-existence, process count using Streaming Replication|
 |pg.status          |PostgreSQL processes working state                                                               |
 |pg.stat_replication|delay of replication data propagation using Streaming Replication                                |
-|pg.cluster.status  |PostgreSQL processes count as a cluster                                                          |
+|pg.cluster.status  |PostgreSQL processes count as a cluste                方法无法vfwavavdagedddfajdfhoriojjiourijerkl我我按计划覅ifif啊哈覅UI唯一认可你咳嗽哦 结婚卡号花蝴蝶会恢复加肥加大 i惊世毒妃南大街哈候机飞蝗芜湖恢复加的话费覅uh9看门禁客户服务赫尔是UK自己看速度快回复函
+
+
+
+
+电话费 安抚欧尼HiFi按防护乳aura开心伐接口r8ibaohfee8r官方库ijew恩恩 呼呼jhxfj好发辅导员 的r                                                          |
 
 
 
