@@ -2,9 +2,7 @@ pg_monz_win 2.0
 ============================
 pg_monz (PostgreSQL monitoring template for Zabbix) is a Zabbix template for
 monitoring PostgreSQL. It enables various types of monitoring of PostgreSQL
-such as alive, resource, performance, etc.
-Pg_monz also supports automatic discovery of databases and tables using the
-discovery feature of Zabbix and can automatically start monitoring.
+
 
 
 Changes from 1.0
